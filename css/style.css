@@ -1,0 +1,95 @@
+body{margin: 0; position: relative;}
+body.pop-up{background: #000;}
+
+*{
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-weight: normal;
+  color: #333;
+}
+
+h1{
+font-size: 48px;
+margin: 10px 0;
+}
+
+p{
+margin-bottom: 40px;
+}
+
+#pop-up{
+position: relative;
+top: 200px;
+width: 500px;
+margin: 0 auto;
+text-align: center;
+}
+
+#pop-up img{
+position: absolute;
+top: -70px;
+transform: translateX(-50%);
+width: 150px;
+height: 150px;
+}
+
+#pop-up .container{
+background: #f0e4d4;
+padding: 30px;
+position: absolute;
+top: 50px;
+width: 100%;
+box-sizing: border-box;
+}
+
+#pop-up input{
+padding: 10px;
+border: 0;
+border-radius: 10px 0 0 10px;
+border: 1px solid #333;
+font-size: 18px;
+}
+
+button{
+padding: 10px;
+border: 0;
+color: #fff;
+background: #333;
+margin-left: -5px;
+border-radius: 0 10px 10px 0;
+border: 1px solid #333;
+font-size: 18px;
+}
+
+.cross{
+position: absolute;
+top: 10px;
+left: 10px;
+background: #555;
+color: #ddd;
+font-weight: bold;
+width: 22px;
+height: 22px;
+text-align: center;
+border-radius: 11px;
+}
+
+/*POP-UP ANIMATION STYLES */
+#pop-up{
+  top: -400px;
+  transform-origin: 10px 10px;
+  animation: drop 12s ease forwards,
+             swing 10s 13s ease forwards;
+}
+
+@keyframes drop{
+0%{opacity: 0}
+70%{ transform: translatey(700px)}
+100%{ transform: translatey(600px); opacity: 1}
+}
+
+@keyframes swing{
+0%{transform: translatey(600px) rotateZ(0deg)}
+40%{transform: translatey(600px) rotateZ(90deg)}
+70%{transform: translatey(600px) rotateZ(70deg)}
+100%{transform: translatey(600px) rotateZ(75deg)}
+}
